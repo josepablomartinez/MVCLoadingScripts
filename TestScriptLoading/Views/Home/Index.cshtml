@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<script src="~/Scripts/Script2.js"></script>
+<script src="~/Scripts/Script1.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+
+<h2>This is a salute:</h2><p id="testLabel"/>
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#testLabel").text(sayHello("Jose"));
+
+    });
+
+</script>

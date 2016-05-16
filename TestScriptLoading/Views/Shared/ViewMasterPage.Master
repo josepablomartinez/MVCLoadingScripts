@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Mapgenix" %>
+<%--<%@ Import Namespace="SimpleScriptManager" %>--%>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+</head>
+<body>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <%-- Render all the Scripts to the Page --%>
+    <%-- Must be located at the very end of the Master Page to work properly --%>
+    <%Html.Mapgenix().Map(); %>
+    <%Html.Mapgenix().Render(); %>
+</body>
+</html>
+  
