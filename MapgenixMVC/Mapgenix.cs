@@ -4,7 +4,9 @@ using Mapgenix.GSuite.Web;
 using Mapgenix.Layers;
 using Mapgenix.Shapes;
 using Mapgenix.Styles;
+using System.IO;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace Mapgenix
 {
@@ -39,11 +41,12 @@ namespace Mapgenix
 
         public Map Map(int height, int width, System.Drawing.Color background)
         {
-             gsuitemap = new Map();
+            gsuitemap = new Map();
             //gsuitemap.HeightInPixels = height;
             //gsuitemap.Width = width;
             return gsuitemap;
         }
+       
 
 
         public Map Map()
@@ -57,11 +60,13 @@ namespace Mapgenix
                 gsuitemap.MapUnit = GeographyUnit.DecimalDegree;
                 gsuitemap.MapBackground.BackgroundBrush = new GeoSolidBrush(GeoColor.StandardColors.White);
 
-                string districtPath = "C:\\SampleData\\Panama\\panama_districts.shp";
-                string roadPath = "C:\\SampleData\\Panama\\Panama_Roads.shp";
-                string locationPath = "C:\\SampleData\\Panama\\panama_locations.shp";
+                string districtPath = "C:\\SampleData\\Vector\\shapefiles\\Panama\\panama_districts.shp";
+                string roadPath = "C:\\SampleData\\Vector\\shapefiles\\Panama\\Panama_Roads.shp";
+                string locationPath = "C:\\SampleData\\Vector\\shapefiles\\Panama\\panama_locations.shp";
 
                 ShapeFileFeatureLayer districtLayer = FeatureLayerFactory.CreateShapeFileFeatureLayer(districtPath);
+                //AreaStyle aStyle = AreaStyles.CreateSimpleAreaStyle(GeoColor.StandardColors.Black);
+                AreaStyles.CreateSimpleAreaStyle(GeoColor.GetRandomGeoColor(RandomColorType.Pastel), GeoColor.StandardColors.Black);
                 districtLayer.ZoomLevelSet.ZoomLevel01.DefaultAreaStyle = AreaStyles.CreateSimpleAreaStyle(GeoColor.GetRandomGeoColor(RandomColorType.Pastel), GeoColor.StandardColors.Black);
                 districtLayer.ZoomLevelSet.ZoomLevel01.ApplyUntilZoomLevel = ApplyUntilZoomLevel.Level20;
                 //create layer for road
@@ -105,7 +110,16 @@ namespace Mapgenix
 
         public void Render()
         {
-            scriptmanager.Render();            
+            scriptmanager.Render();
+
+            StringWriter stringWriter = new StringWriter();
+            using (HtmlTextWriter writer = new HtmlTextWriter(stringWriter))
+            {
+                gsuitemap.RenderControl(content);
+            }
+                
+            
+            
         }
     }
 }

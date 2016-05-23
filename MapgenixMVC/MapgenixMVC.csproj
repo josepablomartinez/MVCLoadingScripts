@@ -63,27 +63,27 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Mapgenix.Canvas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mapgenix.Canvas.1.0.0.0\lib\net45\Mapgenix.Canvas.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Maggenix\Mapgenix.Canvas\bin\Release\Mapgenix.Canvas.dll</HintPath>
     </Reference>
     <Reference Include="Mapgenix.GSuite.Web">
       <HintPath>..\..\GSuite1\Mapgenix.GSuite.Web\bin\Release\Mapgenix.GSuite.Web.dll</HintPath>
     </Reference>
     <Reference Include="Mapgenix.Layers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mapgenix.Layers.1.0.0.0\lib\net45\Mapgenix.Layers.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Maggenix\Mapgenix.Layers\bin\Release\Mapgenix.Layers.dll</HintPath>
     </Reference>
     <Reference Include="Mapgenix.Shapes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mapgenix.Shapes.1.0.0.0\lib\net45\Mapgenix.Shapes.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Maggenix\Mapgenix.Shapes\bin\Release\Mapgenix.Shapes.dll</HintPath>
     </Reference>
     <Reference Include="Mapgenix.Styles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mapgenix.Styles.1.0.0.0\lib\net45\Mapgenix.Styles.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Maggenix\Mapgenix.Styles\bin\Release\Mapgenix.Styles.dll</HintPath>
     </Reference>
     <Reference Include="Mapgenix.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Mapgenix.Utils.1.0.0.0\lib\net45\Mapgenix.Utils.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Maggenix\Mapgenix.Utils\bin\Release\Mapgenix.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -166,9 +166,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="License-LGPL.txt" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
