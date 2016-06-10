@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScriptLoading", "TestScriptLoading\TestScriptLoading.csproj", "{961AF74F-BCD0-4D71-99BB-ED03D075890F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapgenixMVC", "MapgenixMVC\MapgenixMVC.csproj", "{FD0FF78C-91BA-4B5C-924B-4827743277CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapgenix.GSuite.MVC", "Mapgenix.GSuite.MVC\Mapgenix.GSuite.MVC.csproj", "{67BBE4AC-B1E3-4D3A-8704-B059F1F5325C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FD0FF78C-91BA-4B5C-924B-4827743277CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD0FF78C-91BA-4B5C-924B-4827743277CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD0FF78C-91BA-4B5C-924B-4827743277CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BBE4AC-B1E3-4D3A-8704-B059F1F5325C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BBE4AC-B1E3-4D3A-8704-B059F1F5325C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BBE4AC-B1E3-4D3A-8704-B059F1F5325C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BBE4AC-B1E3-4D3A-8704-B059F1F5325C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

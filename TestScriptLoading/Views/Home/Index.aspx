@@ -8,4 +8,6 @@
 
 <h2>Index</h2>
 
+<%Html.RenderPartial("~/Views/Home/mgMVC.ascx");%>
+
 </asp:Content>

@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82DD0A53-74B8-47B1-8C64-ED20A4C63AAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mapgenix.GSuite.Mvc</RootNamespace>
+    <AssemblyName>Mapgenix.GSuite.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>60572210</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ciloci.Flee, Version=0.9.26.0, Culture=neutral, PublicKeyToken=c8526a021ef298ed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trove.FLEE.0.9.26.0\lib\net20\Ciloci.Flee.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Data, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c29dbf30e059ca9d, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Data.1.7\lib\net40-Client\DotSpatial.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Mono, Version=1.7.0.0, Culture=neutral, PublicKeyToken=425ba4de41127026, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Mono.1.7\lib\net40-Client\DotSpatial.Mono.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Projections, Version=1.7.0.0, Culture=neutral, PublicKeyToken=272632bddd08a38b, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Projections.1.7\lib\net40-Client\DotSpatial.Projections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Serialization, Version=1.7.0.0, Culture=neutral, PublicKeyToken=441f200f827611e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Serialization.1.7\lib\net40-Client\DotSpatial.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Topology, Version=1.7.0.0, Culture=neutral, PublicKeyToken=a66b5e9434ca3671, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Topology.1.7\lib\net40-Client\DotSpatial.Topology.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="gdalconst_csharp, Version=1.0.4704.32537, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Gdal.Extension.1.9.2.1\lib\net40\gdalconst_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.4704.32537, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Gdal.Extension.1.9.2.1\lib\net40\gdal_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GeoAPI, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.1.7.4\lib\net45\GeoAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=3.9.0.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\packages\LumenWorksCsvReader.3.9\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Canvas, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Canvas.1.0.2.0\lib\net45\Mapgenix.Canvas.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.ClientWms, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.ClientWms.1.0.2.0\lib\net45\Mapgenix.ClientWms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.FeatureSource, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.FeatureSource.1.0.5.0\lib\net45\Mapgenix.FeatureSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Gdal.Data, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Gdal.Data.1.1.0.0\lib\net45\Mapgenix.Gdal.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Layers, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Layers.1.0.5.0\lib\net45\Mapgenix.Layers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Projection, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Projection.0.0.1.0\lib\net45\Mapgenix.Projection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.RasterSource, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.RasterSource.1.0.7.0\lib\net45\Mapgenix.RasterSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.RTree, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.RTree.1.0.3.0\lib\net45\Mapgenix.RTree.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Shapes, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Shapes.1.0.2.0\lib\net45\Mapgenix.Shapes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Styles, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Styles.1.0.2.0\lib\net45\Mapgenix.Styles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Symbology, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Symbology.1.1.0.0\lib\net45\Mapgenix.Symbology.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Utils, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Utils.1.0.2.0\lib\net45\Mapgenix.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.14.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.1.14\lib\net45\NetTopologySuite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.PostGis, Version=1.13.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.IO.PostGis.1.13.2\lib\net403-client\NetTopologySuite.IO.PostGis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.EntityFramework.2.2.7\lib\net45\Npgsql.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.4704.32537, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Gdal.Extension.1.9.2.1\lib\net40\ogr_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.4704.32536, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Gdal.Extension.1.9.2.1\lib\net40\osr_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2573bf8a1bdddcd5, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.1.14\lib\net45\PowerCollections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.99.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.99.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.99.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xml.Schema.Linq, Version=2.0.2.56002, Culture=neutral, PublicKeyToken=47d0c84d0ebb13e5, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToXsd.2.0.2\lib\Xml.Schema.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\HtmlHelperExtensions.cs" />
+    <Compile Include="Helper\MapHtmlHelper.cs" />
+    <Compile Include="Helper\MapResourceHelper.cs" />
+    <Compile Include="Helper\RectangleConverter.cs" />
+    <Compile Include="Helper\Validators.cs" />
+    <Compile Include="HttpHandlers\BackgroundAndLogoResource.cs" />
+    <Compile Include="HttpHandlers\GeoResourceFactory.cs" />
+    <Compile Include="HttpHandlers\ImageResource.cs" />
+    <Compile Include="HttpHandlers\MarkerPopupResource.cs" />
+    <Compile Include="HttpHandlers\MarkerResource.cs" />
+    <Compile Include="HttpHandlers\ScriptResource.cs" />
+    <Compile Include="HttpHandlers\SessionRefreshHandler.cs" />
+    <Compile Include="HttpHandlers\TileResource.cs" />
+    <Compile Include="HttpHandlers\TileResourceSingleThread.cs" />
+    <Compile Include="MapSource\Json\IJsonSerializable.cs" />
+    <Compile Include="MapSource\Json\JsonConverter.cs" />
+    <Compile Include="MapSource\Json\JsonFeature.cs" />
+    <Compile Include="MapSource\Json\JsonFeatureOverlayStyle.cs" />
+    <Compile Include="MapSource\Json\JsonMemberAttribute.cs" />
+    <Compile Include="MapSource\Json\JsonSimpleMarkerOverlay.cs" />
+    <Compile Include="MapSource\MapTools\Advanced\BaseMapTool.cs" />
+    <Compile Include="MapSource\MapTools\AnimationPanMapTool.cs" />
+    <Compile Include="MapSource\MapTools\KeyboardMapTool.cs" />
+    <Compile Include="MapSource\MapTools\LoadingImageMapTool.cs" />
+    <Compile Include="MapSource\MapTools\LogoMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MapTools.cs" />
+    <Compile Include="MapSource\MapTools\MeasureMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MeasureType.cs" />
+    <Compile Include="MapSource\MapTools\MeasureUnitType.cs" />
+    <Compile Include="MapSource\MapTools\MiniMapMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MouseCoordinateMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MouseCoordinateType.cs" />
+    <Compile Include="MapSource\MapTools\MouseMapTool.cs" />
+    <Compile Include="MapSource\MapTools\OverlaySwitcherMapTool.cs" />
+    <Compile Include="MapSource\MapTools\PanZoomBarMapTool.cs" />
+    <Compile Include="MapSource\MapTools\PanZoomMapTool.cs" />
+    <Compile Include="MapSource\MapTools\ScaleLineMapTool.cs" />
+    <Compile Include="MapSource\MapTools\TrackZoomMaskType.cs" />
+    <Compile Include="MapSource\Map\BaseControl.cs" />
+    <Compile Include="MapSource\Map\BasePopup.cs" />
+    <Compile Include="MapSource\Map\CloudPopup.cs" />
+    <Compile Include="MapSource\Map\ContextMenu.cs" />
+    <Compile Include="MapSource\Map\ContextMenuItem.cs" />
+    <Compile Include="MapSource\Map\ContextMenuItemClickEventArgs.cs" />
+    <Compile Include="MapSource\Map\CursorType.cs" />
+    <Compile Include="MapSource\Map\CustomPopup.cs" />
+    <Compile Include="MapSource\Map\ExtentChangedEventArgs.cs" />
+    <Compile Include="MapSource\Map\Map.cs" />
+    <Compile Include="MapSource\Map\MapClickEventArgs.cs" />
+    <Compile Include="MapSource\Map\ResourceDeploymentMode.cs" />
+    <Compile Include="MapSource\Map\WebConfigRegistrationMode.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\BaseOverlay.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\BaseOverlayChangedEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\EditSettings.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\FeatureOverlayStyle.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\HighlightFeatureOverlayClickEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerDraggedEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerDragMode.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerManager.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerOverlayClickEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\TileType.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\TrackMode.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\TransitionEffect.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\WebImageFormat.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\WrapDateLineMode.cs" />
+    <Compile Include="MapSource\Overlays\ArcGISServerRestOverlay.cs" />
+    <Compile Include="MapSource\Overlays\BaseFeatureOverlay.cs" />
+    <Compile Include="MapSource\Overlays\BaseMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\BaseMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\ClassBreakMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\ClientCache.cs" />
+    <Compile Include="MapSource\Overlays\ClusterMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\EditFeatureOverlay.cs" />
+    <Compile Include="MapSource\Overlays\FeatureSourceMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\GoogleMapType.cs" />
+    <Compile Include="MapSource\Overlays\GoogleOverlay.cs" />
+    <Compile Include="MapSource\Overlays\HighlightFeatureOverlay.cs" />
+    <Compile Include="MapSource\Overlays\InMemoryMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\LayerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\Marker.cs" />
+    <Compile Include="MapSource\Overlays\MarkerClassBreak.cs" />
+    <Compile Include="MapSource\Overlays\MarkerValueItem.cs" />
+    <Compile Include="MapSource\Overlays\MarkerZoomLevel.cs" />
+    <Compile Include="MapSource\Overlays\MarkerZoomLevelSet.cs" />
+    <Compile Include="MapSource\Overlays\OpenStreetMapOverlay.cs" />
+    <Compile Include="MapSource\Overlays\PointMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\ServerCache.cs" />
+    <Compile Include="MapSource\Overlays\SimpleMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\ValueMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\VirtualEarthMapType.cs" />
+    <Compile Include="MapSource\Overlays\VirtualEarthOverlay.cs" />
+    <Compile Include="MapSource\Overlays\WebImage.cs" />
+    <Compile Include="MapSource\Overlays\WmsOverlay.cs" />
+    <Compile Include="MapSource\Shared\GeoKeyedCollection.cs" />
+    <Compile Include="MapSource\Shared\IDictionaryExtensions.cs" />
+    <Compile Include="MapSource\Shared\IRequireId.cs" />
+    <Compile Include="MapSource\Shared\MapUtilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\ExceptionDescription.Designer.cs">
+      <DependentUpon>ExceptionDescription.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ThemeResource.Designer.cs">
+      <DependentUpon>ThemeResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JavaScripts\ContextMenu.js" />
+    <EmbeddedResource Include="JavaScripts\GeoFunction.js" />
+    <EmbeddedResource Include="JavaScripts\MapHelper.js" />
+    <EmbeddedResource Include="JavaScripts\MapParser.js" />
+    <EmbeddedResource Include="JavaScripts\OpenLayers.js" />
+    <EmbeddedResource Include="JavaScripts\OpenLayersExtension.js" />
+    <EmbeddedResource Include="JavaScripts\PrintTemplate.htm" />
+    <EmbeddedResource Include="Properties\ExceptionDescription.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionDescription.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemeResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ThemeResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+    <Content Include="License-LGPL.txt" />
+    <Content Include="Resources\add_point_off.png" />
+    <Content Include="Resources\add_point_on.png" />
+    <Content Include="Resources\arrow_r.gif" />
+    <Content Include="Resources\BingMapsLogo.png" />
+    <Content Include="Resources\blank.gif" />
+    <Content Include="Resources\btn_edit.gif" />
+    <Content Include="Resources\btn_map_apply.png" />
+    <Content Include="Resources\btn_map_delete.png" />
+    <Content Include="Resources\btn_map_edit.png" />
+    <Content Include="Resources\btn_map_label.png" />
+    <Content Include="Resources\btn_map_lastlocation.png" />
+    <Content Include="Resources\btn_map_locate.png" />
+    <Content Include="Resources\btn_map_refresh.png" />
+    <Content Include="Resources\btn_map_trace.png" />
+    <Content Include="Resources\btn_map_zoom.png" />
+    <Content Include="Resources\btn_refresh.gif" />
+    <Content Include="Resources\btn_stopAutoRefresh.gif" />
+    <Content Include="Resources\btn_track_small.gif" />
+    <Content Include="Resources\close.gif" />
+    <Content Include="Resources\cloud-popup-relative.png" />
+    <Content Include="Resources\cross.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\drag-rectangle-off.png" />
+    <Content Include="Resources\drag-rectangle-on.png" />
+    <Content Include="Resources\DrawShapes.png" />
+    <Content Include="Resources\draw_line_off.png" />
+    <Content Include="Resources\draw_line_on.png" />
+    <Content Include="Resources\draw_point_off.png" />
+    <Content Include="Resources\draw_point_on.png" />
+    <Content Include="Resources\draw_polygon_off.png" />
+    <Content Include="Resources\draw_polygon_on.png" />
+    <Content Include="Resources\east-mini.png" />
+    <Content Include="Resources\editing_tool_bar.png" />
+    <Content Include="Resources\grid_headerbkg.gif" />
+    <Content Include="Resources\its_pane_bkg.png" />
+    <Content Include="Resources\layer-switcher-maximize.png" />
+    <Content Include="Resources\layer-switcher-minimize.png" />
+    <Content Include="Resources\loading.png" />
+    <Content Include="Resources\map.bmp" />
+    <Content Include="Resources\MapgenixLogo.png" />
+    <Content Include="Resources\marker-blue.png" />
+    <Content Include="Resources\marker-gold.png" />
+    <Content Include="Resources\marker-green.png" />
+    <Content Include="Resources\marker.png" />
+    <Content Include="Resources\measuring-stick-off.png" />
+    <Content Include="Resources\measuring-stick-on.png" />
+    <Content Include="Resources\move_feature_off.png" />
+    <Content Include="Resources\move_feature_on.png" />
+    <Content Include="Resources\nav_blue_e.gif" />
+    <Content Include="Resources\nav_blue_fullextent.gif" />
+    <Content Include="Resources\nav_blue_n.gif" />
+    <Content Include="Resources\nav_blue_ne.gif" />
+    <Content Include="Resources\nav_blue_nw.gif" />
+    <Content Include="Resources\nav_blue_s.gif" />
+    <Content Include="Resources\nav_blue_se.gif" />
+    <Content Include="Resources\nav_blue_sw.gif" />
+    <Content Include="Resources\nav_blue_w.gif" />
+    <Content Include="Resources\north-mini.png" />
+    <Content Include="Resources\overview_replacement.gif" />
+    <Content Include="Resources\panning-hand-off.png" />
+    <Content Include="Resources\panning-hand-on.png" />
+    <Content Include="Resources\pan_off.png" />
+    <Content Include="Resources\pan_on.png" />
+    <Content Include="Resources\PoweredByMapgenix.png" />
+    <Content Include="Resources\Print.png" />
+    <Content Include="Resources\remove_point_off.png" />
+    <Content Include="Resources\remove_point_on.png" />
+    <Content Include="Resources\shield_triangle_red.png" />
+    <Content Include="Resources\slider.png" />
+    <Content Include="Resources\south-mini.png" />
+    <Content Include="Resources\style.css" />
+    <Content Include="Resources\tool_blue_zoomin.gif" />
+    <Content Include="Resources\tool_blue_zoomout.gif" />
+    <Content Include="Resources\tool_Circle.gif" />
+    <Content Include="Resources\tool_Ecllips.gif" />
+    <Content Include="Resources\tool_line.gif" />
+    <Content Include="Resources\tool_point.gif" />
+    <Content Include="Resources\tool_polygon.gif" />
+    <Content Include="Resources\tool_rectangle.gif" />
+    <Content Include="Resources\tool_Square.gif" />
+    <Content Include="Resources\TrackLine.png" />
+    <Content Include="Resources\TrackPointer.ICO" />
+    <Content Include="Resources\updateprogress.gif" />
+    <Content Include="Resources\view_next_off.png" />
+    <Content Include="Resources\view_next_on.png" />
+    <Content Include="Resources\view_previous_off.png" />
+    <Content Include="Resources\view_previous_on.png" />
+    <Content Include="Resources\west-mini.png" />
+    <Content Include="Resources\zoom-minus-mini.png" />
+    <Content Include="Resources\zoom-plus-mini.png" />
+    <Content Include="Resources\zoom-world-mini.png" />
+    <Content Include="Resources\zoombar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\Mapgenix.Gdal.Extension.1.9.2.1\build\Mapgenix.Gdal.Extension.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Mapgenix.Gdal.Extension.1.9.2.1\build\Mapgenix.Gdal.Extension.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\Mapgenix.Gdal.Extension.1.9.2.1\build\Mapgenix.Gdal.Extension.targets" Condition="Exists('..\packages\Mapgenix.Gdal.Extension.1.9.2.1\build\Mapgenix.Gdal.Extension.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

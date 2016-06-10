@@ -1,16 +1,22 @@
 ﻿
 using Mapgenix.Canvas;
-using Mapgenix.GSuite.Web;
+using Mapgenix.GSuite.Mvc;
 using Mapgenix.Layers;
 using Mapgenix.Shapes;
 using Mapgenix.Styles;
+using System;
 using System.IO;
 using System.Web.Mvc;
 using System.Web.UI;
 
+
+[assembly: System.Web.UI.WebResource("MapgenixMVC.Scripts.1.js", "text/javascript")]
+[assembly: System.Web.UI.WebResource("MapgenixMVC.Scripts.2.js", "text/javascript")]
+
+
 namespace Mapgenix
 {
-
+    
     public class Mapgenix
     {
         private HtmlHelper htmlHelper;
@@ -26,8 +32,9 @@ namespace Mapgenix
             this.htmlHelper = helper;
             //add scripts 
             scriptmanager = new SimpleScriptManager.SimpleScriptManager(helper);
-            scriptmanager.ScriptInclude("Script2", "Scripts/Script2.js");
-            scriptmanager.ScriptInclude("Script1", "Scripts/Script1.js");
+            scriptmanager.ScriptInclude<Mapgenix>("Script2", "MapgenixMVC.Scripts.1.js");
+            scriptmanager.ScriptInclude<Mapgenix>("Script1", "MapgenixMVC.Scripts.2.js");
+            scriptmanager.Render();
         }
 
         public Map Map(int height, int width)
@@ -49,11 +56,12 @@ namespace Mapgenix
        
 
 
-        public Map Map()
+        public void Map()
         {
             try
             {
-                gsuitemap = new Map();
+                //this.htmlHelper = helper;
+                gsuitemap = new Map(Guid.NewGuid().ToString(), 600,600);
                 //gsuitemap.BackColor = _backgroundColor;
                 //gsuitemap.Height = _height;
                 //gsuitemap.Width = _weight;
@@ -96,7 +104,14 @@ namespace Mapgenix
                 gsuitemap.CurrentExtent = districtLayer.GetBoundingBox();
                 districtLayer.Close();
 
-                return gsuitemap;
+                //return gsuitemap;
+
+                var writer = this.htmlHelper.ViewContext.HttpContext.Response.Output;
+
+                using (HtmlTextWriter HTMLwriter = new HtmlTextWriter(writer))
+                {
+                    gsuitemap.RenderControl(HTMLwriter);
+                }
 
             }
             catch (System.Exception)
@@ -110,16 +125,15 @@ namespace Mapgenix
 
         public void Render()
         {
-            scriptmanager.Render();
+            //scriptmanager.Render();
 
-            StringWriter stringWriter = new StringWriter();
-            using (HtmlTextWriter writer = new HtmlTextWriter(stringWriter))
-            {
-                gsuitemap.RenderControl(content);
-            }
-                
-            
-            
+            //var writer = this.htmlHelper.ViewContext.HttpContext.Response.Output;
+
+            //using (HtmlTextWriter HTMLwriter = new HtmlTextWriter(writer))
+            //{
+            //    gsuitemap.RenderControl(HTMLwriter);
+            //}
+
         }
     }
 }

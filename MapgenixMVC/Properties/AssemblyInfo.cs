@@ -1,18 +1,22 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
+using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MapgenixMVC")]
+[assembly: AssemblyTitle("Mapgenix.GSuite.Mvc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MapgenixMVC")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCompany("Mapgenix")]
+[assembly: AssemblyProduct("Mapgenix.GSuite.Mvc")]
+[assembly: AssemblyCopyright("Copyright ©  2016 Mapgenix")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: CLSCompliant(true)]
+[assembly: System.Web.UI.WebResource("Mapgenix.Scripts.1.js", "text/javascript")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -20,7 +24,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0a6a2ed8-6e54-4eec-a7f4-4a0db5f1469e")]
+[assembly: Guid("506bfdee-d90a-487b-9e0b-9d462567ef49")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,3 +38,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("en-US")]
+[assembly: AssemblyKeyFile(@"")]

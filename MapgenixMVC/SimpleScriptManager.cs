@@ -134,7 +134,7 @@ namespace SimpleScriptManager
         /// </summary>
         public void Render()
         {
-            var writer = this.htmlHelper.ViewContext.HttpContext.Response.Output;
+             var writer = this.htmlHelper.ViewContext.HttpContext.Response.Output;
 
             // Render All Script Includes to the Page
             foreach (var scriptInclude in this.scriptIncludes)
@@ -169,6 +169,7 @@ namespace SimpleScriptManager
 
 
         private static MethodInfo _getWebResourceUrlMethod;
+        private static MethodInfo[] _getWebResourceUrlMethods;
         private static object _getWebResourceUrlLock = new object();
 
         private static string getWebResourceUrl<T>(string resourceName)
@@ -183,16 +184,21 @@ namespace SimpleScriptManager
                 lock (_getWebResourceUrlLock)
                 {
                     if (_getWebResourceUrlMethod == null)
-                    {
-                        _getWebResourceUrlMethod = typeof(System.Web.Handlers.AssemblyResourceLoader).GetMethod(
-                            "GetWebResourceUrlInternal",
-                            BindingFlags.NonPublic | BindingFlags.Static);
+                    {                        
+                        _getWebResourceUrlMethods = typeof(System.Web.Handlers.AssemblyResourceLoader).GetMethods(BindingFlags.NonPublic | BindingFlags.Static);
+                        foreach (MethodInfo mi in _getWebResourceUrlMethods)
+                        {
+                            if (mi.Name.Equals("GetWebResourceUrlInternal") && mi.GetParameters().Length == 5) { 
+                                _getWebResourceUrlMethod = mi;
+                                break;
+                            }
+                        }
                     }
                 }
             }
-
+            //IScriptManager 
             return "/" + (string)_getWebResourceUrlMethod.Invoke(null,
-                new object[] { Assembly.GetAssembly(typeof(T)), resourceName, false });
+                new object[] { Assembly.GetAssembly(typeof(T)), resourceName, false, false, null});
         }
 
     }

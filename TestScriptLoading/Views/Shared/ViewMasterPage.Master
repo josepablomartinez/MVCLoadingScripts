@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
 <%@ Import Namespace="Mapgenix" %>
-<%--<%@ Import Namespace="SimpleScriptManager" %>--%>
+<%@ Import Namespace="SimpleScriptManager" %>
 <!DOCTYPE html>
 
 <html>
@@ -18,8 +18,12 @@
 
     <%-- Render all the Scripts to the Page --%>
     <%-- Must be located at the very end of the Master Page to work properly --%>
-    <%Html.Mapgenix().Map(); %>
-    <%Html.Mapgenix().Render(); %>
+    <%//Html.Mapgenix().Map(); %>
+    <%--<%Html.Mapgenix().Render(); %>--%>
+    <%--<%Html.SimpleScriptManager().Render();%>--%>
+
 </body>
+
+
 </html>
   

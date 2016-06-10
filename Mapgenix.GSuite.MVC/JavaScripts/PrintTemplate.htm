@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+    <title>Print</title>
+    <script type='text/javascript' src='opl_GeoResource.axd'></script>
+    <script type='text/javascript' src='extension_GeoResource.axd'></script>
+    <script type='text/javascript' src='helper_GeoResource.axd'></script>
+    <script type='text/javascript' src='parser_GeoResource.axd'></script>
+    <script type="text/javascript">
+        function init(id) {
+            var parentMapDiv = window.opener.document.getElementById(id);
+            var container = parentMapDiv.cloneNode(true);
+
+            var panel = document.getElementById('contentPanel');
+            panel.style.width = parentMapDiv.clientWidth + "px";
+            panel.style.height = parentMapDiv.clientHeight + "px";
+            panel.innerHTML = container.innerHTML;
+            window.print();
+        }
+    </script>
+
+    <link href="/theme/default/style.css" rel="Stylesheet" type="text/css" />
+</head>
+<body onload="init('#ID#')" style="font-size: 10px; font-family: verdana;">
+    <div id="contentPanel" style="border: solid 1px #cccccc; overflow:hidden;">
+    </div>
+</body>
+</html>

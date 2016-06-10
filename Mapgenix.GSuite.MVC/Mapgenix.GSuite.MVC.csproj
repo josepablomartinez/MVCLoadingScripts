@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67BBE4AC-B1E3-4D3A-8704-B059F1F5325C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mapgenix.GSuite.MVC</RootNamespace>
+    <AssemblyName>Mapgenix.GSuite.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ciloci.Flee, Version=0.9.26.0, Culture=neutral, PublicKeyToken=c8526a021ef298ed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trove.FLEE.0.9.26.0\lib\net20\Ciloci.Flee.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Data, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c29dbf30e059ca9d, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Data.1.7\lib\net40-Client\DotSpatial.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Mono, Version=1.0.0.0, Culture=neutral, PublicKeyToken=425ba4de41127026, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Mono.1.5.0\lib\net40\DotSpatial.Mono.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Projections, Version=0.11.9.6, Culture=neutral, PublicKeyToken=272632bddd08a38b, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Projections.0.11.9.6\lib\net40\DotSpatial.Projections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Projections.Forms, Version=1.0.2011.52, Culture=neutral, PublicKeyToken=52099474f11b7ff0, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Projections.0.11.9.6\lib\net40\DotSpatial.Projections.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Serialization, Version=0.11.9.6, Culture=neutral, PublicKeyToken=441f200f827611e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Serialization.0.11.9.6\lib\net40\DotSpatial.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Topology, Version=0.11.9.6, Culture=neutral, PublicKeyToken=a66b5e9434ca3671, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotSpatial.Topology.0.11.9.6\lib\net40\DotSpatial.Topology.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GeoAPI, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.1.7.4\lib\net45\GeoAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=3.9.0.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\packages\LumenWorksCsvReader.3.9\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Canvas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Canvas.1.0.0.0\lib\net45\Mapgenix.Canvas.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.FeatureSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.FeatureSource.1.0.0.0\lib\net45\Mapgenix.FeatureSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Layers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Layers.1.0.0.0\lib\net45\Mapgenix.Layers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Shapes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Shapes.1.0.0.0\lib\net45\Mapgenix.Shapes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Styles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapgenix.Styles.1.0.0.0\lib\net45\Mapgenix.Styles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapgenix.Utils">
+      <HintPath>..\..\Maggenix\Mapgenix.Utils\bin\Release\Mapgenix.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.14.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.1.14\lib\net45\NetTopologySuite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.PostGis, Version=1.13.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.IO.PostGis.1.13.2\lib\net403-client\NetTopologySuite.IO.PostGis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.EntityFramework.2.2.7\lib\net45\Npgsql.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2573bf8a1bdddcd5, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.1.14\lib\net45\PowerCollections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.100.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.100.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.100.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.100.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.100.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.100.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\HtmlHelperExtensions.cs" />
+    <Compile Include="Helper\MapHtmlHelper.cs" />
+    <Compile Include="Helper\MapResourceHelper.cs" />
+    <Compile Include="Helper\RectangleConverter.cs" />
+    <Compile Include="HttpHandlers\BackgroundAndLogoResource.cs" />
+    <Compile Include="HttpHandlers\GeoResourceFactory.cs" />
+    <Compile Include="HttpHandlers\ImageResource.cs" />
+    <Compile Include="HttpHandlers\MarkerPopupResource.cs" />
+    <Compile Include="HttpHandlers\MarkerResource.cs" />
+    <Compile Include="HttpHandlers\ScriptResource.cs" />
+    <Compile Include="HttpHandlers\SessionRefreshHandler.cs" />
+    <Compile Include="HttpHandlers\TileResource.cs" />
+    <Compile Include="HttpHandlers\TileResourceSingleThread.cs" />
+    <Compile Include="MapSource\Json\IJsonSerializable.cs" />
+    <Compile Include="MapSource\Json\JsonConverter.cs" />
+    <Compile Include="MapSource\Json\JsonFeature.cs" />
+    <Compile Include="MapSource\Json\JsonFeatureOverlayStyle.cs" />
+    <Compile Include="MapSource\Json\JsonMemberAttribute.cs" />
+    <Compile Include="MapSource\Json\JsonSimpleMarkerOverlay.cs" />
+    <Compile Include="MapSource\MapTools\Advanced\BaseMapTool.cs" />
+    <Compile Include="MapSource\MapTools\AnimationPanMapTool.cs" />
+    <Compile Include="MapSource\MapTools\KeyboardMapTool.cs" />
+    <Compile Include="MapSource\MapTools\LoadingImageMapTool.cs" />
+    <Compile Include="MapSource\MapTools\LogoMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MapTools.cs" />
+    <Compile Include="MapSource\MapTools\MeasureMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MeasureType.cs" />
+    <Compile Include="MapSource\MapTools\MeasureUnitType.cs" />
+    <Compile Include="MapSource\MapTools\MiniMapMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MouseCoordinateMapTool.cs" />
+    <Compile Include="MapSource\MapTools\MouseCoordinateType.cs" />
+    <Compile Include="MapSource\MapTools\MouseMapTool.cs" />
+    <Compile Include="MapSource\MapTools\OverlaySwitcherMapTool.cs" />
+    <Compile Include="MapSource\MapTools\PanZoomBarMapTool.cs" />
+    <Compile Include="MapSource\MapTools\PanZoomMapTool.cs" />
+    <Compile Include="MapSource\MapTools\ScaleLineMapTool.cs" />
+    <Compile Include="MapSource\MapTools\TrackZoomMaskType.cs" />
+    <Compile Include="MapSource\Map\BaseControl.cs" />
+    <Compile Include="MapSource\Map\BasePopup.cs" />
+    <Compile Include="MapSource\Map\CloudPopup.cs" />
+    <Compile Include="MapSource\Map\ContextMenu.cs" />
+    <Compile Include="MapSource\Map\ContextMenuItem.cs" />
+    <Compile Include="MapSource\Map\ContextMenuItemClickEventArgs.cs" />
+    <Compile Include="MapSource\Map\CursorType.cs" />
+    <Compile Include="MapSource\Map\CustomPopup.cs" />
+    <Compile Include="MapSource\Map\ExtentChangedEventArgs.cs" />
+    <Compile Include="MapSource\Map\Map.cs" />
+    <Compile Include="MapSource\Map\MapClickEventArgs.cs" />
+    <Compile Include="MapSource\Map\ResourceDeploymentMode.cs" />
+    <Compile Include="MapSource\Map\WebConfigRegistrationMode.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\BaseOverlay.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\BaseOverlayChangedEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\EditSettings.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\FeatureOverlayStyle.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\HighlightFeatureOverlayClickEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerDraggedEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerDragMode.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerManager.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\MarkerOverlayClickEventArgs.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\TileType.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\TrackMode.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\TransitionEffect.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\WebImageFormat.cs" />
+    <Compile Include="MapSource\Overlays\Advanced\WrapDateLineMode.cs" />
+    <Compile Include="MapSource\Overlays\ArcGISServerRestOverlay.cs" />
+    <Compile Include="MapSource\Overlays\BaseFeatureOverlay.cs" />
+    <Compile Include="MapSource\Overlays\BaseMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\BaseMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\ClassBreakMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\ClientCache.cs" />
+    <Compile Include="MapSource\Overlays\ClusterMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\EditFeatureOverlay.cs" />
+    <Compile Include="MapSource\Overlays\FeatureSourceMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\GoogleMapType.cs" />
+    <Compile Include="MapSource\Overlays\GoogleOverlay.cs" />
+    <Compile Include="MapSource\Overlays\HEREMapsMapType.cs" />
+    <Compile Include="MapSource\Overlays\HEREMapsOverlay.cs" />
+    <Compile Include="MapSource\Overlays\HighlightFeatureOverlay.cs" />
+    <Compile Include="MapSource\Overlays\InMemoryMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\LayerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\Marker.cs" />
+    <Compile Include="MapSource\Overlays\MarkerClassBreak.cs" />
+    <Compile Include="MapSource\Overlays\MarkerValueItem.cs" />
+    <Compile Include="MapSource\Overlays\MarkerZoomLevel.cs" />
+    <Compile Include="MapSource\Overlays\MarkerZoomLevelSet.cs" />
+    <Compile Include="MapSource\Overlays\OpenStreetMapOverlay.cs" />
+    <Compile Include="MapSource\Overlays\PointMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\ServerCache.cs" />
+    <Compile Include="MapSource\Overlays\SimpleMarkerOverlay.cs" />
+    <Compile Include="MapSource\Overlays\ValueMarkerStyle.cs" />
+    <Compile Include="MapSource\Overlays\VirtualEarthMapType.cs" />
+    <Compile Include="MapSource\Overlays\VirtualEarthOverlay.cs" />
+    <Compile Include="MapSource\Overlays\WebImage.cs" />
+    <Compile Include="MapSource\Overlays\WmsOverlay.cs" />
+    <Compile Include="MapSource\Shared\GeoKeyedCollection.cs" />
+    <Compile Include="MapSource\Shared\IDictionaryExtensions.cs" />
+    <Compile Include="MapSource\Shared\IRequireId.cs" />
+    <Compile Include="MapSource\Shared\MapUtilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JavaScripts\ContextMenu.js" />
+    <Content Include="JavaScripts\GeoFunction.js" />
+    <Content Include="JavaScripts\MapHelper.js" />
+    <Content Include="JavaScripts\MapParser.js" />
+    <Content Include="JavaScripts\OpenLayers.js" />
+    <Content Include="JavaScripts\OpenLayersExtension.js" />
+    <Content Include="JavaScripts\PrintTemplate.htm" />
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.100.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.100.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.100.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.100.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

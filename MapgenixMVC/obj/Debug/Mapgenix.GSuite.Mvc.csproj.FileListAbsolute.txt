@@ -1,0 +1,3 @@
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\Maggenix\Mapgenix.GSuite.Mvc\obj\Debug\Mapgenix.GSuite.Mvc.Properties.ExceptionDescription.resources
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\Maggenix\Mapgenix.GSuite.Mvc\obj\Debug\Mapgenix.GSuite.Mvc.ThemeResource.resources
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\Maggenix\Mapgenix.GSuite.Mvc\obj\Debug\Mapgenix.GSuite.Mvc.csproj.GenerateResource.Cache

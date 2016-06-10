@@ -17,13 +17,13 @@ namespace TestScriptLoading.Controllers
             return View();
         }
 
-        protected internal virtual void PreRender()
-        {
-            Page page = new Page();
-            //System.Type.
-            //return page.ClientScript.
-            //    ClientScript.GetWebResourceUrl(type, resourceId);
-        }
+        //protected internal virtual void PreRender()
+        //{
+        //    Page page = new Page();
+        //    //System.Type.
+        //    //return page.ClientScript.
+        //    //    ClientScript.GetWebResourceUrl(type, resourceId);
+        //}
 
     }
 }                                                                                                                                                   
