@@ -8,9 +8,9 @@
 
 <h2>Index</h2>
 
-<%--<%Html.RenderPartial("~/Views/Home/mgMVC.ascx");%>--%>
+<%//Html.RenderPartial("~/Views/Home/mgMVC.ascx");%>
 
     <script>
-        Hello('Jose');
+        SayHello('Jose');
     </script>
 </asp:Content>

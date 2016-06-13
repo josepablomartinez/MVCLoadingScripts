@@ -1,6 +1,5 @@
 ﻿
 using Mapgenix.Canvas;
-using Mapgenix.GSuite.Mvc;
 using Mapgenix.Layers;
 using Mapgenix.Shapes;
 using Mapgenix.Styles;
@@ -17,7 +16,7 @@ namespace Mapgenix.GSuite.Mvc
     public class Mapgenix
     {
         private HtmlHelper htmlHelper;
-        SimpleScriptManager scriptmanager;
+        //SimpleScriptManager scriptmanager;
         Map gsuitemap;
 
         private System.Drawing.Color _backgroundColor = System.Drawing.Color.Blue;
@@ -26,12 +25,12 @@ namespace Mapgenix.GSuite.Mvc
 
         public Mapgenix(HtmlHelper helper)
         {
-            this.htmlHelper = helper;
+            //this.htmlHelper = helper;
             //add scripts 
-            scriptmanager = new SimpleScriptManager(helper);
-            scriptmanager.ScriptInclude<GeoResourceFactory>("Script2", " Mapgenix.GSuite.Mvc.Scripts.1.js");
-            scriptmanager.ScriptInclude<GeoResourceFactory>("Script1", " Mapgenix.GSuite.Mvc.Scripts.2.js");
-            scriptmanager.Render();
+            helper.SimpleScriptManager().ScriptInclude<GeoResourceFactory>("Script1", " Mapgenix.GSuite.Mvc.Scripts.1.js");
+            helper.SimpleScriptManager().ScriptInclude<Mapgenix>("Script2", " Mapgenix.GSuite.Mvc.Scripts.2.js");
+            //scriptmanager.ScriptInclude<Mapgenix>("Script1", " Mapgenix.GSuite.Mvc.Scripts.2.js");
+            helper.SimpleScriptManager().Render();
         }
 
         public Map Map(int height, int width)

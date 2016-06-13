@@ -20,7 +20,10 @@ namespace MapgenixMVC
             // within the Page once, no matter how many instances of this control are renderd to the Page.
             this.Html.SimpleScriptManager().ScriptInclude<VUC>(
                  "Script1",
-                 "MapgenixMVC.Script1.js");
+                 "Mapgenix.GSuite.Mvc.Scripts.1.js");
+            this.Html.SimpleScriptManager().ScriptInclude<VUC>(
+                 "Script2",
+                 "Mapgenix.GSuite.Mvc.Scripts.2.js");
 
             this.Html.SimpleScriptManager().Render();
         }

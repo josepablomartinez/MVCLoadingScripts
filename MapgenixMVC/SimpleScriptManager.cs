@@ -180,6 +180,7 @@ namespace Mapgenix.GSuite.Mvc
                 throw new ArgumentNullException("resourceName");
             }
 
+
             if (_getWebResourceUrlMethod == null)
             {
                 lock (_getWebResourceUrlLock)

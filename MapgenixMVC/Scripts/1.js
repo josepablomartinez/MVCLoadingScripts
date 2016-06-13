@@ -1,3 +1,3 @@
-﻿function sayHello(person) {
+﻿function SayHello(person) {
     return addSalutation(person);
 }
