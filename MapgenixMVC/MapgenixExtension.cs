@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Mapgenix
+namespace Mapgenix.GSuite.Mvc
 {
     public static class MapgenixExtension
     {

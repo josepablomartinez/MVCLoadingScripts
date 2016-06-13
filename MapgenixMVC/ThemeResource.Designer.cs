@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mapgenix.GSuite.Web {
+namespace Mapgenix.GSuite.Mvc
+{
     using System;
     
     
@@ -39,7 +40,7 @@ namespace Mapgenix.GSuite.Web {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Mapgenix.GSuite.Web.ThemeResource", typeof(ThemeResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Mapgenix.GSuite.Mvc.ThemeResource", typeof(ThemeResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

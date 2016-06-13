@@ -16,7 +16,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: CLSCompliant(true)]
-[assembly: System.Web.UI.WebResource("Mapgenix.Scripts.1.js", "text/javascript")]
+[assembly: System.Web.UI.WebResource("Mapgenix.GSuite.Mvc.Scripts.1.js", "text/javascript")]
+[assembly: System.Web.UI.WebResource("Mapgenix.GSuite.Mvc.Scripts.2.js", "text/javascript")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

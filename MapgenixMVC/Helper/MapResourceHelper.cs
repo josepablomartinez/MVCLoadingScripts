@@ -67,7 +67,7 @@ namespace Mapgenix.GSuite.Mvc
                 }
 
                 StreamWriter styleWriter = new StreamWriter(page.MapPath("~/theme/default/style.css"));
-                styleWriter.Write(GetResourceScript("Mapgenix.GSuite.Web.Resources.style.css", type));
+                styleWriter.Write(GetResourceScript("Mapgenix.GSuite.Mvc.Resources.style.css", type));
                 styleWriter.Close();
 
                 StreamWriter logWriter = File.CreateText(iconLogPath);

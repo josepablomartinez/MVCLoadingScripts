@@ -12,6 +12,8 @@ namespace Mapgenix.GSuite.Mvc
         private const string GeoHelperLocalFileName = "Mapgenix.GSuite.Mvc.JavaScripts.MapHelper.js";
         internal const string PrintTemplateFileName = "Mapgenix.GSuite.Mvc.JavaScripts.PrintTemplate.htm";
         internal const string GeoParserLocalFileName = "Mapgenix.GSuite.Mvc.JavaScripts.MapParser.js";
+        internal const string TestJavascriptFiles1 = "Mapgenix.GSuite.Mvc.1.js";
+        internal const string TestJavascriptFiles2 = "Mapgenix.GSuite.Mvc.2.js";
 
         private const string Openlayers = "opl";
         private const string Tile = "tile";
@@ -33,6 +35,7 @@ namespace Mapgenix.GSuite.Mvc
         public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)
         {
             return GetHandlerCore(context);
+            //return new InstanceHttpHandler();
         }
 
         public void ReleaseHandler(IHttpHandler handler)
@@ -45,57 +48,57 @@ namespace Mapgenix.GSuite.Mvc
             IHttpHandler returnHandler = null;
             string requestName = GetRequestNameFromRequestPath(context.Request.Path);
 
-            switch (requestName)
-            {
-                case Openlayers:
-                    return new ScriptResource(OpenlayersLocalFileName);
+            //switch (requestName)
+            //{
+            //case Openlayers:
+            //    return new ScriptResource(OpenlayersLocalFileName);
 
-                case Tile:
-                    return new MultiThreadTileResource();
+            //case Tile:
+            //    return new MultiThreadTileResource();
 
-                case Singletile:
-                    return new SingleThreadTileResource();
+            //case Singletile:
+            //    return new SingleThreadTileResource();
 
-                case Menu:
-                    return new ScriptResource(ContextMenuLocalFileName);
+            //case Menu:
+            //    return new ScriptResource(ContextMenuLocalFileName);
 
-                case Function:
-                    return new ScriptResource(GeoFunctionLocalFileName);
+            //case Function:
+            //    return new ScriptResource(GeoFunctionLocalFileName);
 
-                case Parser:
-                    return new ScriptResource(GeoParserLocalFileName);
+            //case Parser:
+            //    return new ScriptResource(GeoParserLocalFileName);
 
-                case Helper:
-                    return new ScriptResource(GeoHelperLocalFileName);
+            //case Helper:
+            //    return new ScriptResource(GeoHelperLocalFileName);
 
-                case Print:
-                    return new ScriptResource(PrintTemplateFileName);
+            //case Print:
+            //    return new ScriptResource(PrintTemplateFileName);
 
-                case Extension:
-                    return new ScriptResource(OpenlayersLocalExtensionFileName);
+            //case Extension:
+            //    return new ScriptResource(OpenlayersLocalExtensionFileName);
 
-                case Icon:
-                    return new ImageResource();
+            //case Icon:
+            //    return new ImageResource();
 
-                case Background:
-                    return new BackgroundAndLogoResource(Background);
+            //case Background:
+            //    return new BackgroundAndLogoResource(Background);
 
-                case Session:
-                    return new SessionRefreshHandler();
+            //case Session:
+            //    return new SessionRefreshHandler();
 
-                case Logo:
-                    return new BackgroundAndLogoResource(Logo);
+            //case Logo:
+            //    return new BackgroundAndLogoResource(Logo);
 
-                case Markers:
-                    return new MarkerResource();
+            //case Markers:
+            //    return new MarkerResource();
 
-                case Popup:
-                    return new MarkerPopupResource();
+            //case Popup:
+            //    return new MarkerPopupResource();
 
-                default: break;
-            }
+            //    default: break;
+            //}
 
-            return returnHandler;
+            return null;
         }
 
         private static string GetRequestNameFromRequestPath(string requestPath)

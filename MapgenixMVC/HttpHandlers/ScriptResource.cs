@@ -25,36 +25,36 @@ namespace Mapgenix.GSuite.Mvc
             get { return true; }
         }
 
-        //public void ProcessRequest(HttpContext context)
-        //{
-        //    context.Response.Clear();
-        //    context.Response.Cache.SetExpires(DateTime.Now.AddDays(1.0));
-        //    context.Response.Cache.SetCacheability(HttpCacheability.Public);
+        public void ProcessRequest(HttpContext context)
+        {
+            context.Response.Clear();
+            context.Response.Cache.SetExpires(DateTime.Now.AddDays(1.0));
+            context.Response.Cache.SetCacheability(HttpCacheability.Public);
 
-        //    if (_resourceName.Equals(GeoResourceFactory.PrintTemplateFileName))
-        //    {
-        //        context.Response.Write(GetPrintTemplateScript(context));
-        //    }
-        //    else if (_resourceName.Equals(GeoResourceFactory.GeoParserLocalFileName))
-        //    {
-        //        string codeBase = GetType().Assembly.CodeBase;
-        //        string filePath = context.Server.UrlDecode(new Uri(Path.GetDirectoryName(codeBase) + "\\MapParser.js").AbsolutePath);
-        //        if (File.Exists(filePath))
-        //        {
-        //            context.Response.Write(MapResourceHelper.GetFileScript(filePath));
-        //        }
-        //        else
-        //        {
-        //            context.Response.Write(MapResourceHelper.GetResourceScript(_resourceName, GetType()));
-        //        }
-        //    }
-        //    else if (!String.IsNullOrEmpty(_resourceName))
-        //    {
-        //        context.Response.Write(MapResourceHelper.GetResourceScript(_resourceName, GetType()));
-        //    }
+            if (_resourceName.Equals(GeoResourceFactory.PrintTemplateFileName))
+            {
+                context.Response.Write(GetPrintTemplateScript(context));
+            }
+            else if (_resourceName.Equals(GeoResourceFactory.GeoParserLocalFileName))
+            {
+                string codeBase = GetType().Assembly.CodeBase;
+                string filePath = context.Server.UrlDecode(new Uri(Path.GetDirectoryName(codeBase) + "\\MapParser.js").AbsolutePath);
+                if (File.Exists(filePath))
+                {
+                    context.Response.Write(MapResourceHelper.GetFileScript(filePath));
+                }
+                else
+                {
+                    context.Response.Write(MapResourceHelper.GetResourceScript(_resourceName, GetType()));
+                }
+            }
+            else if (!String.IsNullOrEmpty(_resourceName))
+            {
+                context.Response.Write(MapResourceHelper.GetResourceScript(_resourceName, GetType()));
+            }
 
-        //    context.ApplicationInstance.CompleteRequest();
-        //}
+            context.ApplicationInstance.CompleteRequest();
+        }
 
         private string GetPrintTemplateScript(HttpContext context)
         {

@@ -1,7 +1,7 @@
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\Scripts\2.js
-C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\MapgenixMVC.dll.config
-C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\MapgenixMVC.dll
-C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\MapgenixMVC.pdb
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\Mapgenix.GSuite.Mvc.dll.config
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\Mapgenix.GSuite.Mvc.dll
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\Mapgenix.GSuite.Mvc.pdb
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\Ciloci.Flee.dll
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\DotSpatial.Data.dll
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\DotSpatial.Mono.dll
@@ -89,6 +89,8 @@ C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debu
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\tr\ZedGraph.resources.dll
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\bin\Debug\zh-tw\ZedGraph.resources.dll
-C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\MapgenixMVC.dll
-C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\MapgenixMVC.pdb
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\Mapgenix.GSuite.Mvc.ThemeResource.resources
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\MapgenixMVC.csproj.GenerateResource.Cache
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\Mapgenix.GSuite.Mvc.dll
+C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\Mapgenix.GSuite.Mvc.pdb
 C:\Users\jp_cr\OneDrive\Documents\Mapgenix\MVCScriptLoading\MapgenixMVC\obj\Debug\MapgenixMVC.csprojResolveAssemblyReference.cache

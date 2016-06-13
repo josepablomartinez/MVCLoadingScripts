@@ -7,8 +7,8 @@
     <ProjectGuid>{FD0FF78C-91BA-4B5C-924B-4827743277CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MapgenixMVC</RootNamespace>
-    <AssemblyName>MapgenixMVC</AssemblyName>
+    <RootNamespace>Mapgenix.GSuite.Mvc</RootNamespace>
+    <AssemblyName>Mapgenix.GSuite.Mvc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -201,6 +201,17 @@
     <Compile Include="CustomViewClass.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Helper\MapResourceHelper.cs" />
+    <Compile Include="Helper\RectangleConverter.cs" />
+    <Compile Include="HttpHandlers\BackgroundAndLogoResource.cs" />
+    <Compile Include="HttpHandlers\GeoResourceFactory.cs" />
+    <Compile Include="HttpHandlers\ImageResource.cs" />
+    <Compile Include="HttpHandlers\InstanceHttpHandler.cs" />
+    <Compile Include="HttpHandlers\MarkerPopupResource.cs" />
+    <Compile Include="HttpHandlers\ScriptResource.cs" />
+    <Compile Include="HttpHandlers\SessionRefreshHandler.cs" />
+    <Compile Include="HttpHandlers\TileResource.cs" />
+    <Compile Include="HttpHandlers\TileResourceSingleThread.cs" />
     <Compile Include="Mapgenix.cs" />
     <Compile Include="MapgenixExtension.cs" />
     <Compile Include="MapSource\Json\IJsonSerializable.cs" />
@@ -289,6 +300,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleScriptManager.cs" />
     <Compile Include="SimpleScriptManagerExtension.cs" />
+    <Compile Include="ThemeResource.Designer.cs" />
     <Compile Include="VUC.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -403,10 +415,11 @@
     <Content Include="Resources\zoom-plus-mini.png" />
     <Content Include="Resources\zoom-world-mini.png" />
     <Content Include="Resources\zoombar.png" />
+    <EmbeddedResource Include="ThemeResource.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="HttpHandlers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.100.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.100.0\build\net45\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -40,9 +40,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mapgenix.GSuite.Web">
-      <HintPath>..\..\Maggenix\Mapgenix.GSuite.Web\bin\Release\Mapgenix.GSuite.Web.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -133,6 +130,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\Martinez.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SimpleScriptManager
+namespace Mapgenix.GSuite.Mvc
 {
     public class SimpleScriptManager
     {
@@ -132,7 +132,8 @@ namespace SimpleScriptManager
         /// <summary>
         /// Renders the SimpleScriptManager to the Page
         /// </summary>
-        public void Render()
+        public void 
+            Render()
         {
              var writer = this.htmlHelper.ViewContext.HttpContext.Response.Output;
 
@@ -197,7 +198,7 @@ namespace SimpleScriptManager
                 }
             }
             //IScriptManager 
-            return "/" + (string)_getWebResourceUrlMethod.Invoke(null,
+            return  (string)_getWebResourceUrlMethod.Invoke(null,
                 new object[] { Assembly.GetAssembly(typeof(T)), resourceName, false, false, null});
         }
 

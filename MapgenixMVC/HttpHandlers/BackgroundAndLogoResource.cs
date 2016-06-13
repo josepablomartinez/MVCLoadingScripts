@@ -31,53 +31,53 @@ namespace Mapgenix.GSuite.Mvc
             get { return true; }
         }
 
-        //public void ProcessRequest(HttpContext context)
-        //{
-        //    if (_type.Equals(Background, StringComparison.OrdinalIgnoreCase))
-        //    {
-        //        OutputBackground(context);
-        //    }
-        //    else if (_type.Equals(Logo, StringComparison.OrdinalIgnoreCase))
-        //    {
-        //        OutputLogo(context);
-        //    }
-        //}
+        public void ProcessRequest(HttpContext context)
+        {
+            if (_type.Equals(Background, StringComparison.OrdinalIgnoreCase))
+            {
+                OutputBackground(context);
+            }
+            else if (_type.Equals(Logo, StringComparison.OrdinalIgnoreCase))
+            {
+                OutputLogo(context);
+            }
+        }
 
-        //private static void OutputBackground(HttpContext context)
-        //{
-        //    string imageFormat = context.Request.QueryString["Format"];
-        //    int imageQuality = int.Parse(context.Request.QueryString["Quality"], CultureInfo.InvariantCulture);
+        private static void OutputBackground(HttpContext context)
+        {
+            string imageFormat = context.Request.QueryString["Format"];
+            int imageQuality = int.Parse(context.Request.QueryString["Quality"], CultureInfo.InvariantCulture);
 
-        //    RectangleShape extent = new RectangleShape(-180, 90, 180, -90);
+            RectangleShape extent = new RectangleShape(-180, 90, 180, -90);
 
-        //    using (Bitmap bitmap = new Bitmap(256, 256))
-        //    {
-        //        GdiPlusGeoCanvas canvas = new GdiPlusGeoCanvas();
-        //        canvas.DrawingQuality = DrawingQuality.HighSpeed;
-        //        canvas.BeginDrawing(bitmap, extent, GeographyUnit.DecimalDegree);
+            using (Bitmap bitmap = new Bitmap(256, 256))
+            {
+                GdiPlusGeoCanvas canvas = new GdiPlusGeoCanvas();
+                canvas.DrawingQuality = DrawingQuality.HighSpeed;
+                canvas.BeginDrawing(bitmap, extent, GeographyUnit.DecimalDegree);
 
 
-        //        string pageName = context.Request.QueryString["PageName"];
-        //        string clientId = context.Request.QueryString["ClientId"];
-        //        string cacheId = context.Request.QueryString["CacheId"];
+                string pageName = context.Request.QueryString["PageName"];
+                string clientId = context.Request.QueryString["ClientId"];
+                string cacheId = context.Request.QueryString["CacheId"];
 
-        //        BackgroundLayer mapBackground = (BackgroundLayer)context.Session[String.Concat(pageName, clientId, cacheId, "MapBackground")];
+                BackgroundLayer mapBackground = (BackgroundLayer)context.Session[String.Concat(pageName, clientId, cacheId, "MapBackground")];
 
-        //        if (mapBackground != null)
-        //        {
-        //            canvas.Clear(mapBackground.BackgroundBrush);
-        //        }
+                if (mapBackground != null)
+                {
+                    canvas.Clear(mapBackground.BackgroundBrush);
+                }
 
-        //        canvas.EndDrawing();
+                canvas.EndDrawing();
 
-        //        context.Response.Clear();
-        //        context.Response.Cache.SetExpires(DateTime.Now.AddDays(1.0));
-        //        context.Response.Cache.SetCacheability(HttpCacheability.Public);
-        //        context.Response.ContentType = imageFormat;
-        //        context.Response.BinaryWrite(MapResourceHelper.ConvertImageFormat(bitmap, imageFormat, imageQuality));
-        //        context.ApplicationInstance.CompleteRequest();
-        //    }
-        //}
+                context.Response.Clear();
+                context.Response.Cache.SetExpires(DateTime.Now.AddDays(1.0));
+                context.Response.Cache.SetCacheability(HttpCacheability.Public);
+                context.Response.ContentType = imageFormat;
+                context.Response.BinaryWrite(MapResourceHelper.ConvertImageFormat(bitmap, imageFormat, imageQuality));
+                context.ApplicationInstance.CompleteRequest();
+            }
+        }
 
         private void OutputLogo(HttpContext context)
         {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace SimpleScriptManager
+namespace Mapgenix.GSuite.Mvc
 {
     public static class SimpleScriptManagerExtensions
     {

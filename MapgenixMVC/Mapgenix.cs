@@ -10,17 +10,14 @@ using System.Web.Mvc;
 using System.Web.UI;
 
 
-[assembly: System.Web.UI.WebResource("MapgenixMVC.Scripts.1.js", "text/javascript")]
-[assembly: System.Web.UI.WebResource("MapgenixMVC.Scripts.2.js", "text/javascript")]
 
-
-namespace Mapgenix
+namespace Mapgenix.GSuite.Mvc
 {
     
     public class Mapgenix
     {
         private HtmlHelper htmlHelper;
-        SimpleScriptManager.SimpleScriptManager scriptmanager;
+        SimpleScriptManager scriptmanager;
         Map gsuitemap;
 
         private System.Drawing.Color _backgroundColor = System.Drawing.Color.Blue;
@@ -31,9 +28,9 @@ namespace Mapgenix
         {
             this.htmlHelper = helper;
             //add scripts 
-            scriptmanager = new SimpleScriptManager.SimpleScriptManager(helper);
-            scriptmanager.ScriptInclude<Mapgenix>("Script2", "MapgenixMVC.Scripts.1.js");
-            scriptmanager.ScriptInclude<Mapgenix>("Script1", "MapgenixMVC.Scripts.2.js");
+            scriptmanager = new SimpleScriptManager(helper);
+            scriptmanager.ScriptInclude<GeoResourceFactory>("Script2", " Mapgenix.GSuite.Mvc.Scripts.1.js");
+            scriptmanager.ScriptInclude<GeoResourceFactory>("Script1", " Mapgenix.GSuite.Mvc.Scripts.2.js");
             scriptmanager.Render();
         }
 
