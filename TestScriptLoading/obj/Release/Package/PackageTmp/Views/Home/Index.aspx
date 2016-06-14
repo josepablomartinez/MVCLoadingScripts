@@ -11,6 +11,6 @@
 <%--<%Html.RenderPartial("~/Views/Home/mgMVC.ascx");%>--%>
 
     <script>
-        Hello('Jose');
+        SayHello('Jose');
     </script>
 </asp:Content>

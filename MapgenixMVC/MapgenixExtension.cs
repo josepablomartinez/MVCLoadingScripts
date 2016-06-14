@@ -10,15 +10,15 @@ namespace Mapgenix.GSuite.Mvc
     {
         private static readonly string mapGenixKey = "Mapgenix";
 
-        public static Mapgenix Mapgenix(this HtmlHelper helper)
+        public static MapgenixTest Mapgenix(this HtmlHelper helper)
         {
             // Get SimpleScriptManager from HttpContext.Items
             // This allows for a single SimpleScriptManager to be created and used per HTTP request.
-            Mapgenix mapgenixManager = null;
+            MapgenixTest mapgenixManager = null;
             if (!helper.ViewContext.HttpContext.Items.Contains(mapGenixKey))
             {
                 // If SimpleScriptManager hasn't been initialized yet, then initialize it.
-                mapgenixManager = new Mapgenix(helper);
+                mapgenixManager = new MapgenixTest(helper);
                 // Store it in HttpContext.Items for subsequent requests during this HTTP request.
                 helper.ViewContext.HttpContext.Items.Add(mapGenixKey, mapgenixManager);
             }

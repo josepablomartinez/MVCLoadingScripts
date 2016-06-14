@@ -45,8 +45,9 @@ namespace Mapgenix.GSuite.Mvc
 
         protected virtual IHttpHandler GetHandlerCore(HttpContext context)
         {
-            IHttpHandler returnHandler = null;
-            string requestName = GetRequestNameFromRequestPath(context.Request.Path);
+            //IHttpHandler returnHandler = null;
+            //string requestName = GetRequestNameFromRequestPath(context.Request.Path);
+            return new ScriptResource(OpenlayersLocalFileName);
 
             //switch (requestName)
             //{
@@ -98,7 +99,7 @@ namespace Mapgenix.GSuite.Mvc
             //    default: break;
             //}
 
-            return null;
+            //return null;
         }
 
         private static string GetRequestNameFromRequestPath(string requestPath)

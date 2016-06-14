@@ -13,7 +13,7 @@ using System.Web.UI;
 namespace Mapgenix.GSuite.Mvc
 {
     
-    public class Mapgenix
+    public class MapgenixTest
     {
         private HtmlHelper htmlHelper;
         //SimpleScriptManager scriptmanager;
@@ -23,12 +23,12 @@ namespace Mapgenix.GSuite.Mvc
         private int _height = 600;
         private int _weight = 800;
 
-        public Mapgenix(HtmlHelper helper)
+        public MapgenixTest(HtmlHelper helper)
         {
             //this.htmlHelper = helper;
             //add scripts 
-            helper.SimpleScriptManager().ScriptInclude<GeoResourceFactory>("Script1", " Mapgenix.GSuite.Mvc.Scripts.1.js");
-            helper.SimpleScriptManager().ScriptInclude<Mapgenix>("Script2", " Mapgenix.GSuite.Mvc.Scripts.2.js");
+            helper.SimpleScriptManager().ScriptInclude<Mapgenix.GSuite.Mvc.MapgenixTest>("Script1", "Mapgenix.GSuite.Mvc.Scripts.1.js");
+            helper.SimpleScriptManager().ScriptInclude<Mapgenix.GSuite.Mvc.MapgenixTest>("Script2", "Mapgenix.GSuite.Mvc.Scripts.2.js");
             //scriptmanager.ScriptInclude<Mapgenix>("Script1", " Mapgenix.GSuite.Mvc.Scripts.2.js");
             helper.SimpleScriptManager().Render();
         }

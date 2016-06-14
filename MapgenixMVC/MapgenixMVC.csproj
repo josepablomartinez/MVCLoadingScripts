@@ -210,6 +210,7 @@
     <Compile Include="HttpHandlers\MarkerPopupResource.cs" />
     <Compile Include="HttpHandlers\ScriptResource.cs" />
     <Compile Include="HttpHandlers\SessionRefreshHandler.cs" />
+    <Compile Include="HttpHandlers\TestResource.cs" />
     <Compile Include="HttpHandlers\TileResource.cs" />
     <Compile Include="HttpHandlers\TileResourceSingleThread.cs" />
     <Compile Include="Mapgenix.cs" />

@@ -140,6 +140,8 @@ namespace Mapgenix.GSuite.Mvc
             // Render All Script Includes to the Page
             foreach (var scriptInclude in this.scriptIncludes)
             {
+                //Use this change if want to use custom handler
+                //string newResource = scriptInclude.Value.Replace("WebResource", "GeoResource");
                 writer.WriteLine(String.Format("<script type='text/javascript' src='{0}'></script>", scriptInclude.Value));
             }
 
